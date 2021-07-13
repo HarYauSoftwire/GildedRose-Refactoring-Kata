@@ -23,6 +23,9 @@ class Shop {
                 if (item.name == "Aged Brie") {
                     qualityDecreasePerDay *= -1;
                 }
+                if (item.name.startsWith("Conjured")) {
+                    qualityDecreasePerDay *= 2;
+                }
                 if (item.sellIn < 0) {
                     item.quality -= 2 * qualityDecreasePerDay;
                 } else {

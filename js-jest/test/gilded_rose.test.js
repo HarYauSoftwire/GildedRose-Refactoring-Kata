@@ -110,7 +110,7 @@ describe("Gilded Rose", function () {
     });
 
     it("should decrease the Quality of Conjured by 4 when past the sell-by date", function () {
-        const gildedRose = new Shop([new Item("Conjured", -30, 30)]);
+        const gildedRose = new Shop([new Item("Conjured Mana Cake", -30, 30)]);
         const items = gildedRose.updateQuality();
         expect(items[0].quality).toBe(26);
     });
